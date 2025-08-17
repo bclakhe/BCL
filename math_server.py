@@ -138,7 +138,7 @@ def main():
         logger.info("Server started successfully")
         print("About to call mcp.run...", file=sys.stderr)
         # Run with stdio transport for MCP communication
-        mcp.run(transport="stdio")
+        mcp.run(transport="sse")
 
     except Exception as e:
         logger.error(f"Server error: {e}")
