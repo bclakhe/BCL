@@ -141,7 +141,7 @@ def main():
         print(f"Environment variables set: FASTMCP_HOST={os.environ.get('FASTMCP_HOST')}, FASTMCP_PORT={os.environ.get('FASTMCP_PORT')}", file=sys.stderr)
         
         # Run FastMCP with HTTP transport - it should use the environment variables
-        mcp.run(transport="http")
+        mcp.run(transport="sse")
 
     except Exception as e:
         logger.error(f"Server error: {e}")
