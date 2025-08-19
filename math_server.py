@@ -133,11 +133,7 @@ def main():
         print(f"About to start server on {host}:{port}...", file=sys.stderr)
         
         # Run FastMCP with HTTP transport for Render compatibility
-        mcp.run(
-            transport="http",
-            host=host,
-            port=port
-        )
+        mcp.run(transport="http")
 
     except Exception as e:
         logger.error(f"Server error: {e}")
